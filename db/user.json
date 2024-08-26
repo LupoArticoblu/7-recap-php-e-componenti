@@ -1,0 +1,30 @@
+[
+  {
+    "name": "miss sophie",
+    "email": "5bZgS@example.com",
+    "password": "sophie",
+    "adress": "imperial 123",
+    "age": 20
+  },
+  {
+    "name": "lady jane",
+    "email": "VZDp8@example.com",
+    "password": "jane",
+    "adress": "jaiaane street 23",
+    "age": 22
+  },
+  {
+    "name": "john doe",
+    "email": "ep!cguy@example.com",
+    "password": "john",
+    "adress": "andalusa square 1",
+    "age": 32
+  },
+  {
+    "name": "cougar christine",
+    "email": "wPwzU@example.com",
+    "password": "cougar",
+    "adress": "chris st 11",
+    "age": 40
+  }
+]

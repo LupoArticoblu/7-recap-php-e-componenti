@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Homepage",
+    "url": "index.php",
+    "public": true
+  },
+  {
+    "name": "Contatti",
+    "url": "contatti.php",
+    "public": true
+  },
+  {
+    "name": "Chi siamo",
+    "url": "chi_siamo.php",
+    "public": true
+  },
+  {
+    "name": "Login",
+    "url": "login.php",
+    "public": false
+  }
+  
+]
