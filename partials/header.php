@@ -1,6 +1,6 @@
 <?php
   //var_dump($_SERVER);
-  
+  session_start();
   if ($_SERVER['HTTP_HOST'] == 'localhost:8080') {
     $folder =  'personal-homepage/';
   } else {
@@ -16,7 +16,9 @@
   <nav>
     <ul>
       <?php foreach ($menu as $item) { ?>
-      <li><a href="<?php echo $url ?><?php echo $item['url'] ?>"><?php echo $item['name'] ?></a></li>
+        <?php if($item['public'] || isset($_SESSION['userLogged'])) { ?>
+          <li><a href="<?php echo $url ?><?php echo $item['url'] ?>"><?php echo $item['name'] ?></a></li>
+        <?php } ?>
       <?php } ?>
     </ul>
 

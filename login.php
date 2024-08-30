@@ -1,24 +1,30 @@
 <?php
- include_once('partials/head.php');  
  if(empty($_POST['email']) || empty($_POST['password'])) {
    $errorMsg = 'Inserisci username e password';
- }else{
-  $string = file_get_contents('./db/user.json');
-  $users = json_decode($string, true);
-  //solo se trovo l'utente richiesto il valore tornerà true
-  $validUser = false;
-  foreach ($users as $user) {
-    if($user['email'] == $_POST['email'] && $user['password'] == $_POST['password']) {
-      $validUser = true;
-      
-      $logged = $user;
-  }
-  if($validUser){
-    $errorMsg = 'Login effettuato, benvenuto '. $logged['name'];
   }else{
-    $errorMsg = 'Login fallito';
-  }  
+    $string = file_get_contents('./db/user.json');
+    $users = json_decode($string, true);
+    //solo se trovo l'utente richiesto il valore tornerà true
+    $validUser = false;
+    foreach ($users as $user) {
+      if($user['email'] == $_POST['email'] && $user['password'] == $_POST['password']) {
+        $validUser = true;
+        
+        $logged = $user;
+      }
+      if($validUser){
+        $errorMsg = 'Login effettuato, benvenuto '. $logged['name'];
+        $_SESSION['userLogged'] = $logged;
+        header('Location: index.php');
+      }else{
+        $errorMsg = 'Login fallito';
+      }  
+    }
   }
+  if(isset($_SESSION['userLogged'])) {
+    header('Location: pag-utente.php');
+  }
+  include_once('partials/head.php');  
 ?>
 <body>
  <?php
