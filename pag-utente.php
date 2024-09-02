@@ -1,9 +1,9 @@
 <?php
-  
-  include_once('partial/head.php');
+  session_start();
   if(!isset($_SESSION['userLogged'])) {
     header('Location: login.php');
   }
+  include_once('partial/head.php');
 ?>
 
 <body>

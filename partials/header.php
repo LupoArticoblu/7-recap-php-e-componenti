@@ -24,6 +24,10 @@
           <li><a href="<?php echo $url ?><?php echo $item['url'] ?>"><?php echo $item['name'] ?></a></li>
         <?php } ?>
       <?php } ?>
+      <?php if(!$userLogged) { ?>
+        <li><a href="<?php echo $url ?>login.php">Login</a></li>
+      <?php } ?>
+        
     </ul>
 
   </nav>

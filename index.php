@@ -1,4 +1,6 @@
 <?php
+//inseriamo in tutte le pagine session start ma non nell'header
+  session_start();  
  include_once('partials/head.php');  
 ?>
 <body>

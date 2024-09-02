@@ -15,11 +15,6 @@
     "public": true
   },
   {
-    "name": "Login",
-    "url": "login.php",
-    "public": false
-  },
-  {
     "name": "Pagina utente",
     "url": "pag-utente.php",
     "public": false
