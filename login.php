@@ -2,6 +2,7 @@
  if(isset($_SESSION['userLogged'])) {
    header('Location: pagina-utente.php');
  }
+  session_start();
  if(empty($_POST['email']) || empty($_POST['password'])) {
    $errorMsg = 'Inserisci username e password';
   }else{
