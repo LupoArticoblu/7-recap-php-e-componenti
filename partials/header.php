@@ -1,10 +1,14 @@
 <?php
   //var_dump($_SERVER);
-  
+  session_start();
   if ($_SERVER['HTTP_HOST'] == 'localhost:8080') {
     $folder =  'personal-homepage/';
   } else {
     $folder = '';
+  };
+  $userLogged = false;
+  if(isset($_SESSION['userLogged'])) {
+    $userLogged = true;
   }
   
   $url = $_SERVER['REQUEST_SCHEME']. '://' . $_SERVER['HTTP_HOST'] .'/'. $folder;
@@ -16,7 +20,9 @@
   <nav>
     <ul>
       <?php foreach ($menu as $item) { ?>
-      <li><a href="<?php echo $url ?><?php echo $item['url'] ?>"><?php echo $item['name'] ?></a></li>
+        <?php if($item['public'] || (!$item['public'] && $userLogged)) { ?>
+          <li><a href="<?php echo $url ?><?php echo $item['url'] ?>"><?php echo $item['name'] ?></a></li>
+        <?php } ?>
       <?php } ?>
     </ul>
 
