@@ -23,15 +23,5 @@
     "name": "logout",
     "url": "logout.php",
     "public": false
-  },
-  {
-    "name": "Pagina utente",
-    "url": "pagina-utente.php",
-    "public": false
-  },
-  {
-    "name": "logout",
-    "url": "logout.php",
-    "public": false
   }
 ]

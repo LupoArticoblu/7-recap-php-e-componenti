@@ -13,6 +13,7 @@
   <main>
     <div class="container">
       <h1>ciao <?php echo $_SESSION['userLogged']['name'] ?></h1>
+      <p>Indirizzo: <?php echo $_SESSION['userLogged']['address'] ?></p>
     </div>  
   </main>
 
