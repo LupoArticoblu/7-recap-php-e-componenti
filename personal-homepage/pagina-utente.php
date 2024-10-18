@@ -3,12 +3,12 @@
   if(!isset($_SESSION['userLogged'])) {
     header('Location: login.php');
   }
-  include_once('partial/head.php');
+  include_once('partials/head.php');
 ?>
 
 <body>
   <?php
-    include_once('partial/header.php');
+    include_once('partials/header.php');
   ?>
   <main>
     <div class="container">
@@ -18,7 +18,7 @@
   </main>
 
   <?php
-    include_once('partial/footer.php');
+    include_once('partials/footer.php');
   ?>
 
   <script src="./js/main.js"></script>
