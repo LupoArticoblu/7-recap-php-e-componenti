@@ -1,6 +1,6 @@
 <?php 
-  if($_SERVER['HTTP_HOST'] == 'localhost:8888'){
-    $folder = 'personale-homepage/';
+  if($_SERVER['HTTP_HOST'] == 'localhost'){
+    $folder = '7-recap-php-e-componenti/personal-homepage/';
   }else{
     $folder = '';
   };
@@ -9,10 +9,11 @@
     $userLogged = true;
   }
 
-  $url = "http://localhost/7-recap-php-e-componenti/personal-homepage/";
+  $url = 'http://'.$_SERVER['HTTP_HOST'].'/'.$folder;
 
   $string = file_get_contents('./db/root.json');
   $menu = json_decode($string, true);
+  
 ?>
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
